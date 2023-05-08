@@ -1,6 +1,5 @@
 #include "lists.h"
 
-
 /**
  * check_cycle - a func that checks if a singlylinked list has a cycle in it
  * @list:linked list to be checked
@@ -15,7 +14,7 @@ int check_cycle(listint_t *list);
 	if (!list)
 		return (0);
 
-	while (head && tail && head->next)
+	while (tail && head && head->next)
 	{
 		head = head->next->next;
 		tail = tail->next;
