@@ -6,8 +6,9 @@
  * Return:1 if it has and 0 if it does not
  */
 
-int check_cycle(listint_t *list);
+int check_cycle(listint_t *list)
 {
+
 	listint_t *head = list;
 	listint_t *tail = list;
 
