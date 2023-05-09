@@ -1,4 +1,4 @@
-#!/usr/in/python3
+#!/usr/bin/python3
 def uppercase(str):
     for letter in str:
         if ord(letter) >= ord('a') and ord(letter) <= ord('z'):
