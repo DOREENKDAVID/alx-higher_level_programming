@@ -13,7 +13,7 @@ if __name__ == "__main__":
     operator = sys.agv[2]
     b = int(sys.argc[3])
 
-    if operator  == '+':
+    if operator == '+':
         print("{} {} {} = {}".format(a, operator, b, add(a, b)))
     elif operator == '-':
         print("{} {} {} = {}".format(a, operator, b, sub(a, b)))
@@ -24,4 +24,3 @@ if __name__ == "__main__":
     else:
         print("Unknown operator. Available operators: +, -, * and /")
         exit(1)
-
