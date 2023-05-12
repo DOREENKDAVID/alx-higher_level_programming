@@ -5,7 +5,7 @@ if __name__ == "__main__":
     import sys
 
     num_of_args = len(argv)
-    if (num_of_args != 4):
+    if (num_of_args != 3):
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit(1)
 
