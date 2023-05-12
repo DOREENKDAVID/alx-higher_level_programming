@@ -10,7 +10,7 @@ if __name__ == "__main__":
 
     a = int(sys.argv[1])
     op = sys.agv[2]
-    b = int(sys.argc[3])
+    b = int(sys.argv[3])
 
     if op == '+':
         print("{} {} {} = {}".format(a, op, b, add(a, b)))
