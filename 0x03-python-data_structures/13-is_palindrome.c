@@ -1,56 +1,55 @@
-#include <stdio.h>
+#include <unistd.h>
 #include <stdlib.h>
 #include "lists.h"
-#include <unistd.h>
+#include <stdio.h>
 
 /**
- * is_palindrome - checks id the reverse is equal to original
- * @head: pointer to linked list
- * Return: 1 if true and 0 if not
+ * length_of_list - how long the list is
+ * @head:pointer to list
+ * Return: length of list
+ */
+int length_of_list(listint_t *head)
+{
+	int len;
+
+	for (len = 0; head; len++)
+		head = head->next;
+
+	return (len);
+}
+
+/**
+ * is_palindrome - func that check if reverse is = to original
+ * @head:double pointer to list
+ * Return: 1 on sucess ,0 in failure
  */
 
 int is_palindrome(listint_t **head)
 {
-	if (*head == NULL || (*head)->next == NULL)
+	int i, len, half, *entire;
+	listint_t *temp = *head;
+
+	if (!head)
 		return (1);
-	}
 
-	listint_t *slow = *head, *fast = *head;
+	len = length_of_list(temp);
+	entire = malloc(sizeof(int) * len);
+	if (!entire)
+		return (1);
+	temp = *head;
 
-	while (fast->next != NULL && fast->next->next != NULL)
+	for (i = 0; temp; i++)
 	{
-		slow = slow->next;
-		fast = fast->next->next;
+		entire[i] = temp->n;
+		temp = temp->next;
 	}
+	half = i / 2;
 
-	listint_t *prev = NULL, *curr = slow->next, *next;
-
-	while (curr != NULL)
+	for (i = 0; i <= half; i++)
 	{
-		next = curr->next;
-		curr->next = prev;
-		prev = curr;
-		curr = next;
-	}
+		if (entire[i] != entire[len - (i + 1)])
+			return (0);
 
-	listint_t *p1 = *head, *p2 = prev;
-
-	while (p2 != NULL)
-	{
-		if (p1->n != p2->n)
-		return (0);
-	p1 = p1->next;
-	p2 = p2->next;
 	}
-	curr = prev, prev = NULL;
-
-	while (curr != NULL)
-	{
-		next = curr->next;
-		curr->next = prev;
-		prev = curr;
-		curr = next;
-	}
-	slow->next = prev;
 	return (1);
 }
