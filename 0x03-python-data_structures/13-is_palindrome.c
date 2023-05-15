@@ -28,12 +28,12 @@ int is_palindrome(listint_t **head)
 {
 	int i, len, half, *entire;
 	listint_t *temp = *head;
-
+	char *entire = NULL
 	if (!head)
 		return (1);
 
 	len = length_of_list(temp);
-	entire = malloc(sizeof(int) * len);
+	//entire = malloc(sizeof(int) * len);
 	if (!entire)
 		return (1);
 	temp = *head;
