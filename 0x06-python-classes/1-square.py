@@ -16,6 +16,6 @@ class Square:
         (obj:'int') size of square
         """
         self.__size = size
-        """ 
+        """
         Set size as a private attribute of square to var size
         """
