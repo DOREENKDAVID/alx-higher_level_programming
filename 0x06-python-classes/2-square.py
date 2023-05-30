@@ -1,29 +1,25 @@
 #!/usr/bin/python3
-""" Square module """
-
-
 class Square:
-
-    """Define a Square class
+    """ A class that defines a square
 
     Attributes:
-        (size,'int'): size of square
+        size (obj,'int'): size of the square
     """
-    def __init__(self, size=0):
 
-        """initialize square class
- 
+    def __init__(self, size=0):
+        """ Initializes square class
+
         Args:
-        (obj:'int') size of square
+            size (obj:'int') size of the square
         """
         if type(size) is not int:
             raise TypeError("size must be an integer")
-        elif size < 0:
+        if size < 0:
             raise ValueError("size must be >= 0")
-        """attribute size assumes only positive integers
+        """ Only positive integers allowed for attribute size
+
         """
-        else:
-            self.__size = size
-        """
-        set size as a private attribute of square to var size
+        self.__size = size
+        """ Set private attribute of square size to var size
+
         """
