@@ -1,10 +1,12 @@
 #!/usr/bin/python3
+""" Square module """
+
 
 class Square:
 
-    """Define a Square class """
+    """Define a Square class
 
-    """ Attributes:
+    Attributes:
         (size,'int'): size of square
         (area,'int'): area of square
     """

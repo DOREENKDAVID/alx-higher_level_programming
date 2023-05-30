@@ -1,10 +1,12 @@
 #!/usr/bin/python3
+""" Square module """
+
 
 class Square:
 
-    """Define a Square class """
+    """Define a Square class
 
-    """ Attributes:
+        Attributes:
         (size,'int'): size of square
         (area,'int'): area of square
     """
@@ -52,10 +54,26 @@ class Square:
         """
         if type(value) is not int:
             raise TypeError("size must be an integer")
-        if value < 0:
+        elif value < 0:
             raise ValueError("size must be >= 0")
         """
         Attribute value assumes only positive integers
         """
+        else:
+            self.__size = value
 
-        self.__size = value
+    def area(self):
+        """
+        Define and compute the area of square object
+        """
+        return self.__size ** 2
+
+    def my_print(self):
+        """
+         prints in stdout the square with the character #:
+        """
+        if self.__size == 0:
+            print()
+        else:
+            for i in range(self.__size):
+                print('#' * self.__size)

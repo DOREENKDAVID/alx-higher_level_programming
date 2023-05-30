@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+""" Square module """
+
 
 class Square:
 
@@ -14,13 +16,13 @@ class Square:
         """
         if type(size) is not int:
             raise TypeError("size must be an integer")
-        if size < 0:
+        elif size < 0:
             raise ValueError("size must be >= 0")
         """
         Attribute size assumes only positive integers
         """
-
-        self.__size = size
+        else:
+            self.__size = size
         """
         Set size as a private attribute of square to var size
         """
