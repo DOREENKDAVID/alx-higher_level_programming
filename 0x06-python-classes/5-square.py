@@ -6,7 +6,7 @@ class Square:
 
     """Define a Square class """
 
-     def __init__(self, size=0) -> None:
+    def __init__(self, size=0) -> None:
         """
         Intializes the attributes
 
@@ -43,6 +43,6 @@ class Square:
                 num = 0
                 while num < self.__size:
                     print("{}".format("#"), end='')
-                    num+= 1
+                    num += 1
                 print()
                 number += 1
