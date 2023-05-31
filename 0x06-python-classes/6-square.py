@@ -4,7 +4,7 @@
 
 class Square:
 
-     """ Define a square class """
+    """ Define a square class """
 
     def __init__(self, size=0, position=(0, 0)) -> None:
         """
@@ -46,6 +46,7 @@ class Square:
             raise TypeError("position must be a tuple of 2 positive integers")
         else:
             self.__position = value
+
     def area(self):
         """ Calculate area of a square """
         return self.__size ** 2
