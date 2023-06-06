@@ -5,8 +5,8 @@
 
 
 class LockedClass:
-
     """
     define a locked class
     """
-    __attr__ = ('first_name')
+    #  define the available slot that can be created
+    __slot__ = ('first_name')
