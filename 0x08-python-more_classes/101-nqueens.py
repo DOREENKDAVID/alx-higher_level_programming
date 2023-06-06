@@ -45,7 +45,9 @@ if __name__ == "__main__":
         return True
 
     def clear_a(row):
-        """clears the answers from the point of failure on"""
+        """
+        clears the answers from the point of failure on
+        """
         for i in range(row, n):
             a[i][1] = None
 
