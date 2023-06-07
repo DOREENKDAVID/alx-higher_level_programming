@@ -17,7 +17,7 @@ def matrix_divided(matrix, div):
         in 2 dp
     """
     curr_len = 0
-    error_msg "matrix must be a matrix (list of lists) of integers/floats"
+    error_msg = "matrix must be a matrix (list of lists) of integers/floats"
     if type(matrix) is not list:
         raise TypeError(error_msg)
 
@@ -25,7 +25,7 @@ def matrix_divided(matrix, div):
         if type(rows) is not list:
             raise TypeError(error_msg)
 
-        for element in block:
+        for element in rows:
             if type(element) is not int and type(element) is not float:
                 raise TypeError(error_msg)
 
