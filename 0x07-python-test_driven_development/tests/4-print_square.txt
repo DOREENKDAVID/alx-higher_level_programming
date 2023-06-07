@@ -21,47 +21,47 @@ checking for function docstring
         >>> func_docs = print_square.__doc__
         >>> len(func_docs) > 5
         True
-::
 
-checking if size is an integer:
+checking if size is an integer
+::
 	>>> print_square("Hello")
 	Traceback (most recent call last):
 		...
 	TypeError: size must be an integer
 
-	>>>print((1,1))
+	>>> print((1,1))
 	Traceback (most recent call last):
         	...
 	TypeError: size must be an integer
-::
 
 checking if size is a positive integer
-	>>>print_square(-1)
+::
+	>>> print_square(-1)
 	Traceback (most recent call last):
         	...
 	ValueError: size must be >= 0
 
 checking if function is correct
-	>>>print_square(10)
-	>>>print("")
-	##########
-	##########
-	##########
-	##########
-	##########
-	##########
-	##########
-	##########
-	##########
-	##########
-
-
-	>>>print_square(4)
-	####
-	####
-	####
-	####
 ::
+	>>> print_square(10)
+	##########
+	##########
+	##########
+	##########
+	##########
+	##########
+	##########
+	##########
+	##########
+	##########
+
+
+	>>> print_square(4)
+	####
+	####
+	####
+	####
+
 checking if a positive size is passed as a parameter
 ::
         >>> print_square(1)
@@ -70,7 +70,6 @@ checking if a positive size is passed as a parameter
         ###
         ###
         ###
-::
 
 checking when size passed is zero
 ::

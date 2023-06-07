@@ -21,5 +21,5 @@ def print_square(size):
     else:
         for length in range(size):
             for width in range(size):
-                print("{}".format("#"), end='')
-                print()
+                print("#", end='')
+            print()
