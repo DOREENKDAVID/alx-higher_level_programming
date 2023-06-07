@@ -14,8 +14,8 @@ def text_indentation(text):
     """
     if type(text) is not str:
         raise TypeError("text must be a string")
-    split_char_list = list()
-    new_text_list = list()
+    split_sentence_list = list()
+    new_sentence = list()
     letters_list = list()
 
     for char in text:

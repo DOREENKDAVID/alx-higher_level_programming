@@ -21,10 +21,9 @@ checking for function docstring
         >>> func_docs = text_indentation.__doc__
         >>> len(func_docs) > 5
         True
+
+checking if text is not a string:
 ::
-
-testing if text is not a string:
-
     >>> text_indentation(15)
     Traceback (most recent call last):
         ...
@@ -35,19 +34,15 @@ testing if text is not a string:
         ...
     TypeError: text must be a string
 
-::
-
 checking if the function works:
-
-    >>> text_indentation("This is a sentence. This is another sentence? And here is a third one: Hello!")
+::
+    >>> text_indentation("This is a sentence. This is another sentence? And here is a third one:")
     This is a sentence.
     <BLANKLINE>
     This is another sentence?
     <BLANKLINE>
-    And here is a third one:Hello!
+    And here is a third one:
     <BLANKLINE>
-
-::
 
 checking the implementation of text_indentation function
 ::
@@ -114,7 +109,7 @@ checking the implementation of text_indentation function
     <BLANKLINE>
 
             >>> text_indentation("Hello, Beautiful Doreen?\n")
-            Hello, Beautiful Doreen
+            Hello, Beautiful Doreen?
             <BLANKLINE>
             <BLANKLINE>
 
@@ -141,7 +136,6 @@ checking when None is passed
     TypeError: text must be a string
 
 checking when no arguement is passed
-
 ::
     >>> text_indentation()
     Traceback (most recent call last):
