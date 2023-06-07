@@ -64,7 +64,7 @@ class TestMaxInteger(unittest.TestCase):
         """
 
         self.assertEqual(max_integer([1, 2, 3, 4]), 4)
-        self.assertEqual(max_integer([1, 3 ,4, 2]), 4)
+        self.assertEqual(max_integer([1, 3, 4, 2]), 4)
 
     def test_if_negative_num_in_list(self):
         """
