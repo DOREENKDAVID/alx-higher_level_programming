@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""
+5-text_indentation Module
+"""
+
 
 def text_indentation(text):
     """
@@ -23,8 +27,8 @@ def text_indentation(text):
     if letters_list:
         split_sentence_list.append("".join(letters_list))
     letters_list.clear()
-    
-     for sentence in split_sentence_list:
+
+    for sentence in split_sentence_list:
         new_sentence.append(sentence.strip(' '))
     split_sentence_list.clear()
 
@@ -35,4 +39,3 @@ def text_indentation(text):
             return
 
     print("\n\n".join(new_sentence), end='')
-    

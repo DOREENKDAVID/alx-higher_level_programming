@@ -22,7 +22,6 @@ checking for function docstring
         >>> func_docs = matrix_divided.__doc__
         >>> len(func_docs) > 5
         True
-::
 
 Test for strings in the list:
 

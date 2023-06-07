@@ -3,6 +3,7 @@
     100-matrix_mul Module
 """
 
+
 def matrix_mul(m_a, m_b):
     """
      function that multiplies 2 matrices:
@@ -41,7 +42,7 @@ def matrix_mul(m_a, m_b):
         if len(rows) != r_len and r_len != 0:
             raise TypeError("each row of m_b must be of the same size
 ")
-        r_len = len(rows)
+            r_len = len(rows)
 
     # check the order no of clmn in m_a == no or wows in m_b
     if len(m_a[0]) != len(m_b):
