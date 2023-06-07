@@ -21,7 +21,6 @@ checking for function docstring
         >>> func_docs = say_my_name.__doc__
         >>> len(func_docs) > 5
         True
-::
 
 Test if first name is a string:
 
@@ -50,7 +49,7 @@ Test if function displays the strings well in the message:
     My name is John Doe
 
     >>> say_my_name("Adam")
-    My name is Adam
+    My name is Adam 
 
 checking regular functionality when firstname and lastname are passed
 ::
