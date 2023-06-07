@@ -114,7 +114,11 @@ class TestMaxInteger(unittest.TestCase):
         """
 
         self.assertEqual(max_integer([-1.4, 1.4, 1.5]), 1.5)
-
+    def test_if_list_of_1_element(self):
+        """
+        Test for list of one element
+        """
+        self.assertEqual(max_integer([1]), 1)
 
 if __name__ == "__main__":
     unittest.main()
