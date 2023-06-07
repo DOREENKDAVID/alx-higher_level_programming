@@ -3,6 +3,7 @@
     0-add_integer Module
 """
 
+
 def add_integer(a, b=98):
     """
     Add two intergers
@@ -10,7 +11,7 @@ def add_integer(a, b=98):
     Args:
         a: first int
         b: second int
-    
+
     Returns:
         sum of two integers
     """
