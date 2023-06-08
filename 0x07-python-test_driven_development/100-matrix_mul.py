@@ -6,8 +6,16 @@
 
 def matrix_mul(m_a, m_b):
     """
-     function that multiplies 2 matrices:
+     function that multiplies 2 matrices
+
+     Args:
+            m_a: first matrix(2D List)
+            m_b: second matrix(2D List)
+
+        Returns:
+            the product of two matrices
     """
+
     if type(m_a) is not list:
         raise TypeError("m_a must be a list")
     if type(m_b) is not list:
@@ -27,7 +35,8 @@ def matrix_mul(m_a, m_b):
             if type(element) is not int and type(element) is not float:
                 raise TypeError("m_a should contain only integers or floats")
         if len(rows) != r_len and r_len != 0:
-            raise TypeError("each row of m_a must be of the same size")
+            raise TypeError("each row of m_a must be of the\
+                    same size")
         r_len = len(rows)
 
     r_len = 0

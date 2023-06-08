@@ -1,5 +1,5 @@
 ==========================================
-Tests for the 100-matrix_mul module
+Tests for the 100-matrix_mul Module
 ==========================================
 
 This module has only one function which is the ``matrix_mul()``
@@ -20,7 +20,7 @@ checking for function docstring
         >>> func_docs = matrix_mul.__doc__
         >>> len(func_docs) > 5
         True
-::
+
 checking if data Type is passed
 ::
         >>> matrix_mul([[2, 3, 5], [4, 2, 0]], None)
