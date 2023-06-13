@@ -3,6 +3,7 @@
 100-my_int Module
 """
 
+
 class MyInt(int):
     """Definition of class MyInt that inherits from class int"""
 
