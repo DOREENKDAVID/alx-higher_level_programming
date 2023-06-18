@@ -10,7 +10,7 @@ class Square(Rectangle):
     """
     square class
     """
-    
+
     def __init__(self, size, x=0, y=0, id=None):
         """
         initialize method
@@ -20,7 +20,6 @@ class Square(Rectangle):
             y: y coordinate
             id: square object
         """
-        
         super().__init__(size, size,  x, y, id)
 
     def __str__(self):
@@ -31,6 +30,7 @@ class Square(Rectangle):
         return ("[{}] ({}) {}/{} - {}".format(self.__class__.__name__,
                                               self.id, self.x,
                                               self.y, self.width))
+
     @property
     def size(self):
         """ width getter method
@@ -38,8 +38,9 @@ class Square(Rectangle):
                 width and height size
         """
         return self.width
+
     @size.setter
-    def size(self,value):
+    def size(self, value):
         """
         width setter method
         args:
@@ -72,5 +73,3 @@ class Square(Rectangle):
             dictionary
         """
         return {'id': self.id, 'x': self.x, 'size': self.size, 'y': self.y}
-
-    

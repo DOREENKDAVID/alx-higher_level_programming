@@ -14,7 +14,7 @@ class Base:
         id: id of object
     """
     __nb_objects = 0
-    
+
     def __init__(self, id=None):
         """initiation method
         args:
@@ -39,18 +39,19 @@ class Base:
             raise TypeError('{} must be an integer'.format(name))
         if value < 0:
             raise ValueError('{} must be >= 0'.format(name))
+
     @staticmethod
-    def convert_to_json_string(list_dictionaries):
+    def to_json_string(list_dictionaries):
         """returns JSON string
         args:
             list_dictionaries: list of dictionaries
         return:
-            return serialized list or empty list
+            return seralized list or empty list
         """
         return json.dumps(list_dictionaries or [])
 
     @staticmethod
-    def convert_from_json_string(json_string):
+    def from_json_string(json_string):
         """json to string static method
         args:
             json_string: json object string type
@@ -70,7 +71,7 @@ class Base:
             na
         """
         if list_objs:
-            j = cls.convert_to_json_string([obj.to_dictionary() for obj in list_objs])
+            j = cls.to_json_string([obj.to_dictionary() for obj in list_objs])
         else:
             j = '[]'
         with open(cls.__name__ + '.json', 'w') as f:
@@ -100,7 +101,7 @@ class Base:
         try:
             filename = cls.__name__ + '.json'
             with open(filename, mode='r') as f:
-                data = cls.convert_from_json_string(f.read())
+                data = cls.from_json_string(f.read())
             return [cls.create(**x) for x in data]
         except FileNotFoundError:
             return []
