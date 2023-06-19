@@ -119,7 +119,6 @@ class Base:
             if list_objs is None or list_objs == []:
                 csv_file.write("[]")
 
-
             else:
                 if cls.__name__ == "Rectangle":
                     fieldname = ["id", "width", "height", "x", "y"]
@@ -129,6 +128,7 @@ class Base:
 
                     for obj in list_objs:
                         csv_writer.writerow(obj.to_dictionary)
+
     @classmethod
     def load_from_file_csv(cls):
         """
@@ -142,6 +142,7 @@ class Base:
 
             for line in csv_reader:
                 print(line)
+
     @staticmethod
     def draw(list_rectangles, list_squares):
         """
