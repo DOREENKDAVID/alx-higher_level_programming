@@ -125,7 +125,7 @@ class Base:
                     fieldname = ["id", "width", "height", "x", "y"]
                 else:
                     fieldname = ["id", "size", "x", "y"]
-                    csv_writer = csv.Dictwriter(csv_file. fieldnames=fieldname)
+                    csv_writer = csv.Dictwriter(csv_file, fieldnames=fieldname)
 
                     for obj in list_objs:
                         csv_writer.writerow(obj.to_dictionary)
@@ -136,7 +136,7 @@ class Base:
         Args
         class
         """
-         filename = cls.__name__ + '.csv'
+        filename = cls.__name__ + '.csv'
         with open(filename, 'r')as csv_file:
             csv_reader = csv.DictReader(csv_file)
 
