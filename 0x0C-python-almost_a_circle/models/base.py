@@ -3,6 +3,7 @@
 Class Module
 """
 import json
+import csv
 
 
 class Base:
@@ -105,3 +106,52 @@ class Base:
             return [cls.create(**x) for x in data]
         except FileNotFoundError:
             return []
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """
+        write to csv file
+        Args:
+            list_objs
+        """
+        filename = cls.__name__ + '.csv'
+        with open(filename, 'w')as csv_file:
+            if list_objs is None or list_objs == []:
+                csv_file.write("[]")
+
+            else:
+                if cls.__name__ == "Rectangle":
+                    fieldname = ["id", "width", "height", "x", "y"]
+                else:
+                    fieldname = ["id", "size", "x", "y"]
+                    csv_writer = csv.Dictwriter(csv_file. fieldnames=fieldname)
+
+                    for obj in list_objs:
+                        csv_writer.writerow(obj.to_dictionary)
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """
+        opens a window and draws all the Rectangles and Squares
+
+        args:
+        list_rectangle: rectangle instances
+        list_squares:square instances
+        """
+        window = turtle.Screen()
+        pen = turtle.pen()
+        figures = list_rectangles + list_squares
+
+        for figure in figures:
+            pen.up()
+            pen.goto(figure.x, figure.y)
+            pen.down()
+            pen.foward(figure.width)
+            pen.right(90)
+            pen.foward(figure.height)
+            pen.right(90)
+            pen.foward(figure.width)
+            pen.right(90)
+            pen.foward(figure.height)
+            pen.right(90)
+        widow.exitonclick()
