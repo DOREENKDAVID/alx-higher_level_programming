@@ -67,7 +67,7 @@ class TestBaseClass(unittest.TestCase):
         self.assertTrue(Base.save_to_file.__doc__)
         self.assertTrue(Base.create.__doc__)
         self.assertTrue(Base.load_from_file.__doc__)
-
+        self.assertTrue(Base.save_to_file_csv.__doc__)
     def test_class_var_exist(self):
         """check if class variable have value after instantiation"""
         self.assertIsNotNone(Base._Base__nb_objects)
@@ -104,6 +104,8 @@ class TestBaseClass(unittest.TestCase):
         self.assertTrue(hasattr(Base, "save_to_file"))
         self.assertTrue(hasattr(Base, "create"))
         self.assertTrue(hasattr(Base, "load_from_file"))
+        self.assertTrue(hasattr(Base, "save_to_file_csv"))
+        self.assertTrue(hasattr(Base, "load_from_file_csv"))
     
     def test_int_value(self):
         """check if correct value error is raised"""
