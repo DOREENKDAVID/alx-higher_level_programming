@@ -1,7 +1,8 @@
-#JavaScript - Objects, Scopes and Closures
+# JavaScript - Objects, Scopes and Closures
 
-#Learning Objectives
-##General
+# Learning Objectives
+
+## General
 	1. Why JavaScript programming is amazing
 	2. How to create an object in JavaScript
 	3. What this means
@@ -11,15 +12,14 @@
 	7. What is a prototype
 	8. How to inherit an object from another
 # Table of contents
-|##Files	|Description|
-|:-----| |------:|
+|## Files	|Description|
 0-rectangle.js	empty class Rectangle that defines a rectangle
-|:-----|:--------:|
-|1-rectangle.js	|class Rectangle that defines a rectangle|
-2-rectangle.js	|class Rectangle that defines a rectangle|
-3-rectangle.js	|class Rectangle that defines a rectangle|
-4-rectangle.js |	class Rectangle that defines a rectangle|
-|5-square.js |	class Square that defines a square and inherits from Rectangle of 4-rectangle.js|
+
+1-rectangle.js	|class Rectangle that defines a rectangle
+2-rectangle.js	|class Rectangle that defines a rectangle
+3-rectangle.js	|class Rectangle that defines a rectangle
+4-rectangle.js |	class Rectangle that defines a rectangle
+5-square.js |	class Square that defines a square and inherits from Rectangle of 4-rectangle.js|
 6-square.js	class Square that defines a square and inherits from Square of 5-square.js
 7-occurrences.js	JS function that returns the number of occurrences in a list
 8-esrever.js	JS function that returns the reversed version of a list
