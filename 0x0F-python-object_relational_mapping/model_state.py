@@ -14,8 +14,15 @@ Base = declarative_base()
 
 
 class State(Base):
-    """ States class"""
+    """ States class
+
+    Attributes:
+            __tablename__: table to reference
+            id: id of object instance
+            name: string of max 128 chars not null
+    """
     __tablename__ = 'states'
 
-    id = Column(Interger, primary_key=True, nullable=False)
+    id = Column(Integer, primary_key=True, nullable=False,
+                autoincrement=True, unique=True)
     name = Column(String(128), nullable=False)
