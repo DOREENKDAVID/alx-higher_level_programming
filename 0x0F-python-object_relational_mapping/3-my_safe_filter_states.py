@@ -17,6 +17,6 @@ if __name__ == "__main__":
                    BY id ASC", (argv[4],))
     query_rows = cursor.fetchall()
     for row in query_rows:
-            print(row)
+        print(row)
     cursor.close()
     db.close()
