@@ -17,6 +17,6 @@ if __name__ == "__main__":
                    cities.id")
     query_rows = cursor.fetchall()
     for row in query_rows:
-            print(row)
+        print(row)
     cursor.close()
     db.close()
