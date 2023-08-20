@@ -9,7 +9,7 @@ from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
 from model_state import Base, State, City
-
+from sys import argv
 
 if __name__ == "__main__":
     engine = create_engine("mysql+mysqldb://{}:{}@localhost:3306/{}".format(
