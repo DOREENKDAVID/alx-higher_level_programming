@@ -4,24 +4,24 @@ python file that contains the class definition of a City.
 """
 
 
-import sqlalchemy
-from sqlalchemy import Column, Integer, String ForeginKey
 from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.orm import relationship
 from model_state import Base, State
 
 
 class City(Base):
-    """ Cities class
+    """Class City
 
     Attributes:
             __tablename__: table to reference
             id: id of object instance
             name: string of max 128 chars not null
+            state_id: foreignKey
     """
-    __tablename__ = 'cities'
 
-    id = Column(Integer, primary_key=True, nullable=False,
-                autoincrement=True, unique=True)
+    __tablename__ = 'cities'
+    id = Column(Integer, autoincrement=True,
+                primary_key=True, nullable=False, unique=True)
     name = Column(String(128), nullable=False)
-    state_id = Column(Integer, ForeignKey('states.id'), nulluble=False)
+    state_id = Column(Integer, ForeignKey('states.id'), nullable=False)
