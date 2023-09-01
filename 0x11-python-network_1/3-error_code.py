@@ -9,8 +9,6 @@ if __name__ == "__main__":
     import sys
     import urllib.request
     import urllib.error
-
-
     req = sys.argv[1]
     urllib.request.Request(req)
     try:
